@@ -13,7 +13,8 @@ if (!isset($_SESSION["nama"])) {
     echo "<p>Diskon: Rp. " . $_SESSION["diskon"] . "</p>";
     echo "<p>Total: Rp. " . $_SESSION["total"] . "</p>";
 
-    for ($i = 0; $i < count($_SESSION["jumlah"]); $i++) {
-        echo "<p>Jumlah ke-" . ($i + 1) . ": " . $_SESSION["jumlah"][$i] . "</p>";
-    };
+    echo "<h3>Status Botol:</h3>";
+    for ($i = 1; $i <= $_SESSION["jumlah"]; $i++) {
+        echo "<p>Botol ke-$i: Masih Tersegel</p>";
+    }
 }
